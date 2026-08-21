@@ -1,0 +1,133 @@
+/* Configurações gerais */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #3a3a5c);
+
+    padding-top: 40px;
+}
+
+/* Título */
+h1 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+/* Corpo da calculadora */
+.calculadora {
+    width: 350px;
+    padding: 25px;
+
+    background-color: #20202c;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Campos dos números */
+.numeros {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.numeros input {
+    width: 50%;
+    height: 60px;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: #30303f;
+    color: white;
+
+    font-size: 22px;
+    text-align: center;
+
+    outline: none;
+}
+
+/* Quando clicar no campo */
+.numeros input:focus {
+    box-shadow: 0 0 0 2px #7c5cff;
+}
+
+/* Operações */
+.operacoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Botões */
+.operacoes button {
+    height: 60px;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: #7c5cff;
+    color: white;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+/* Efeito ao passar o mouse */
+.operacoes button:hover {
+    background-color: #9178ff;
+    transform: translateY(-2px);
+}
+
+/* Efeito ao clicar */
+.operacoes button:active {
+    transform: scale(0.95);
+}
+
+/* Resultado */
+.resultado {
+    margin-top: 20px;
+    padding: 15px;
+
+    min-height: 80px;
+
+    background-color: #30303f;
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+/* Texto "Resultado:" */
+.resultado p {
+    margin: 0 0 8px;
+
+    color: #aaa;
+    font-size: 16px;
+}
+
+/* Número do resultado */
+#resultado {
+    display: block;
+
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+
+    word-break: break-word;
+}
